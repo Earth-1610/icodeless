@@ -1,0 +1,5 @@
+rootProject.name = 'icodeless'
+include 'icodeless-api'
+include 'icodeless-core'
+include 'icodeless-idea'
+
