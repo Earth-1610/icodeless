@@ -1,0 +1,8 @@
+
+
+| name  |  value  |
+| ------------ | ------------ | 
+| template name: |&nbsp;┌─────────┐<br/>&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br/>&nbsp;└─────────┘ |
+| template params: | &nbsp;┌───────┐&nbsp;┌───────┐<br/>&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ :&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param type&nbsp;▽&nbsp;&nbsp;│ ⊕<br/>&nbsp;└───────┘&nbsp;└───────┘ |
+| content type: |&nbsp;┌─────────┐<br/>&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content type&nbsp;&nbsp;&nbsp;&nbsp;▽&nbsp;&nbsp;&nbsp;&nbsp;│</br>&nbsp;└─────────┘ |
+| content: |&nbsp;┌─────────┐<br/>&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br/>&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</br>&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br/>&nbsp;└─────────┘ |
