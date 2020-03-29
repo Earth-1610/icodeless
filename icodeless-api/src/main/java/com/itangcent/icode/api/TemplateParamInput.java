@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface TemplateParamInput {
 
-    Map<String, Object> readParams(List<TemplateParam> param, Map<String, Object> defaultParams);
+    Map<String, Object> readParams(List<TemplateParam> params, Map<String, Object> defaultParams);
 }

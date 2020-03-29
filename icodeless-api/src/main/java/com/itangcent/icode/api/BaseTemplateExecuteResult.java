@@ -5,7 +5,7 @@ public class BaseTemplateExecuteResult implements TemplateExecuteResult {
     private boolean success;
     private Throwable error;
 
-    private BaseTemplateExecuteResult(Template template, boolean success, Throwable error) {
+    protected BaseTemplateExecuteResult(Template template, boolean success, Throwable error) {
         this.template = template;
         this.success = success;
         this.error = error;
