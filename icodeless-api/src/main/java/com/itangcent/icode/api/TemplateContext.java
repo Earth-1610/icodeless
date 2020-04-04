@@ -16,4 +16,8 @@ public interface TemplateContext {
     Object getAttr(String name);
 
     TemplateContext subContext(Template template);
+
+    static TemplateContext empty() {
+        return new EmptyTemplateContext();
+    }
 }

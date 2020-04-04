@@ -30,14 +30,16 @@ public abstract class AbstractTemplateEditor implements TemplateEditor {
     protected abstract String content();
 
     @Override
-    public void close() {
+    public void save() {
         template.setName(name());
         template.setDisplayName(displayName());
         template.setParams(params());
         template.setType(type());
         template.setContent(content());
-        save(template);
+        template.setAlwaysCheckBeforeRender(alwaysCheckBeforeRender());
+        saveTemplate(template);
     }
 
-    protected abstract void save(Template template);
+    protected abstract void saveTemplate(Template template);
+
 }

@@ -8,7 +8,7 @@ public interface TemplateExecutor {
      * call the template with special params
      */
     default TemplateExecuteResult call(String name, Map<String, Object> params) {
-        return call(name, params, BaseTemplateContext.empty());
+        return call(name, params, TemplateContext.empty());
     }
 
     /**
