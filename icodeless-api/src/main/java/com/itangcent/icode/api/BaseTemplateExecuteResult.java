@@ -30,11 +30,11 @@ public class BaseTemplateExecuteResult implements TemplateExecuteResult {
         return new BaseTemplateExecuteResult(template, true, null);
     }
 
-    public static BaseTemplateExecuteResult faild() {
+    public static BaseTemplateExecuteResult failed() {
         return new BaseTemplateExecuteResult(null, false, null);
     }
 
-    public static BaseTemplateExecuteResult faild(Template template) {
+    public static BaseTemplateExecuteResult failed(Template template) {
         return new BaseTemplateExecuteResult(template, false, null);
     }
 

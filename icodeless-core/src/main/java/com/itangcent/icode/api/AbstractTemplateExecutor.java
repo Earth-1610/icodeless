@@ -15,7 +15,7 @@ public abstract class AbstractTemplateExecutor implements TemplateExecutor {
         //find template
         Template template = templateManager().findByName(name, context);
         if (template == null) {
-            return BaseTemplateExecuteResult.faild();
+            return BaseTemplateExecuteResult.failed();
         }
         //call template with subContext
         return call(template, params, context.subContext(template));
