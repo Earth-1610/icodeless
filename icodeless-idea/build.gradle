@@ -9,11 +9,24 @@ buildscript {
     }
 }
 
+plugins {
+    //https://mvnrepository.com/artifact/org.jetbrains.kotlin.jvm/org.jetbrains.kotlin.jvm.gradle.plugin
+//    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
+    id 'org.jetbrains.kotlin.jvm'
+
+    //https://mvnrepository.com/artifact/org.jetbrains.intellij/org.jetbrains.intellij.gradle.plugin
+    id "org.jetbrains.intellij" version "0.4.11"
+}
+
+
 group 'com.itangcent'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'idea'
+
 
 sourceCompatibility = 1.8
 
@@ -21,8 +34,29 @@ repositories {
     mavenCentral()
 }
 
+intellij {
+    version idea_version
+    pluginName plugin_name
+    updateSinceUntilBuild false
+    downloadSources true
+    sandboxDirectory "idea-sandbox"
+    instrumentCode = true
+    updateSinceUntilBuild false
+    sameSinceUntilBuild false
+}
+
+patchPluginXml {
+    pluginDescription(file(descriptionFile).text)
+    changeNotes(file(changesFile).text)
+}
+
+
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    compile project(":icodeless-api")
+    compile project(":icodeless-core")
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
@@ -31,4 +65,8 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }

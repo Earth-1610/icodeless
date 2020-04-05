@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>com.itangcent.idea.plugin.icodeless</id>
+    <name>Icodeless</name>
+    <version>1.0.0</version>
+    <vendor email="pentatangcent@gmail.com" url="https://github.com/tangcent">tangcent</vendor>
+    <contributor email="layker.zh@gmail.com" url="https://github.com/echo-layker">echo-layker</contributor>
+    <contributor email="407091738@qq.com" url="https://github.com/zjz6b6">zjz6b6</contributor>
+
+    <description><![CDATA[ Description will be added by gradle build]]></description>
+
+    <category>Web</category>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <!--<idea-version since-build="183.0"/>-->
+
+    <!--for compatible-->
+    <!--<idea-version since-build="173.0" until-build="183.0"/>-->
+
+    <!--for dev-->
+    <idea-version since-build="173.0"/>
+
+
+    <change-notes><![CDATA[	Change notes will be filled by gradle build ]]>
+    </change-notes>
+
+    <depends optional="true" config-file="icodeless-java.xml">com.intellij.modules.java</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable groupId="null"
+                                 displayName="Icodeless"
+                                 id="preferences.IcodelessConfigurable"
+                                 instance="com.itangcent.idea.plugin.actions.ICodeLessConfigurable"/>
+
+        <applicationService
+                serviceInterface="com.itangcent.idea.plugin.template.manager.EditableTemplateManager"
+                serviceImplementation="com.itangcent.idea.plugin.fake.FakeTemplateManager">
+
+        </applicationService>
+    </extensions>
+</idea-plugin>
