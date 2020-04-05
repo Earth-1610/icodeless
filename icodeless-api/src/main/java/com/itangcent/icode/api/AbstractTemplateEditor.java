@@ -10,13 +10,6 @@ public abstract class AbstractTemplateEditor implements TemplateEditor {
         this.template = template;
     }
 
-    @Override
-    public void show() {
-        renderTemplate(template);
-    }
-
-    protected abstract void renderTemplate(Template template);
-
     protected abstract String name();
 
     protected abstract String displayName();
@@ -40,6 +33,5 @@ public abstract class AbstractTemplateEditor implements TemplateEditor {
         saveTemplate(template);
     }
 
-    protected abstract void saveTemplate(Template template);
-
+    protected abstract void saveTemplate(EditableTemplate template);
 }
