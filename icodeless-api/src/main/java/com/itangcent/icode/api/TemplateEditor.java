@@ -2,9 +2,7 @@ package com.itangcent.icode.api;
 
 public interface TemplateEditor {
 
-    void show();
-
-    void cancel();
+    void reset();
 
     void save();
 

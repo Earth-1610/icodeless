@@ -1,12 +1,12 @@
 package com.itangcent.idea.plugin.fake;
 
-import com.itangcent.icode.api.Template;
+import com.itangcent.icode.api.EditableTemplate;
+import com.itangcent.icode.api.EditableTemplateManager;
 import com.itangcent.icode.api.TemplateContext;
-import com.itangcent.idea.plugin.template.manager.EditableTemplateManager;
 
 public class FakeTemplateManager implements EditableTemplateManager {
     @Override
-    public boolean isModified() {
+    public boolean isAnyModified() {
         return false;
     }
 
@@ -16,12 +16,12 @@ public class FakeTemplateManager implements EditableTemplateManager {
     }
 
     @Override
-    public Template findByName(String name) {
+    public EditableTemplate findByName(String name) {
         return null;
     }
 
     @Override
-    public Template findByName(String name, TemplateContext context) {
+    public EditableTemplate findByName(String name, TemplateContext context) {
         return null;
     }
 }

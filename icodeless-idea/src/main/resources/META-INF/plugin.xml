@@ -33,7 +33,7 @@
                                  instance="com.itangcent.idea.plugin.actions.ICodeLessConfigurable"/>
 
         <applicationService
-                serviceInterface="com.itangcent.idea.plugin.template.manager.EditableTemplateManager"
+                serviceInterface="com.itangcent.icode.api.EditableTemplateManager"
                 serviceImplementation="com.itangcent.idea.plugin.fake.FakeTemplateManager">
 
         </applicationService>
