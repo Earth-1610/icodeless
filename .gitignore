@@ -2,3 +2,14 @@
 .idea/
 
 .gradle/
+
+
+icodeless-idea/build/
+
+icodeless-idea/idea-sandbox/
+
+icodeless-core/build/
+
+icodeless-api/build/
+
+plugins/
