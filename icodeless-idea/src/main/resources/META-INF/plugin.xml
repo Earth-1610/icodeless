@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.itangcent.idea.plugin.icodeless</id>
+    <id>com.itangcent.icode.idea.plugin.icodeless</id>
     <name>Icodeless</name>
     <version>1.0.0</version>
     <vendor email="pentatangcent@gmail.com" url="https://github.com/tangcent">tangcent</vendor>
@@ -30,11 +30,11 @@
         <applicationConfigurable groupId="null"
                                  displayName="Icodeless"
                                  id="preferences.IcodelessConfigurable"
-                                 instance="com.itangcent.idea.plugin.actions.ICodeLessConfigurable"/>
+                                 instance="com.itangcent.icode.idea.plugin.actions.ICodeLessConfigurable"/>
 
         <applicationService
                 serviceInterface="com.itangcent.icode.api.EditableTemplateManager"
-                serviceImplementation="com.itangcent.idea.plugin.fake.FakeTemplateManager">
+                serviceImplementation="com.itangcent.icode.idea.plugin.fake.FakeTemplateManager">
 
         </applicationService>
     </extensions>

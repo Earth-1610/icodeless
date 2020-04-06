@@ -1,9 +1,9 @@
-package com.itangcent.idea.plugin.actions;
+package com.itangcent.icode.idea.plugin.actions;
 
-import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.options.SearchableConfigurable;
 import com.itangcent.icode.api.EditableTemplateManager;
-import com.itangcent.idea.plugin.ui.ICodeLessConfigurableGUI;
+import com.itangcent.icode.idea.plugin.ui.ICodeLessConfigurableGUI;
+import com.itangcent.icode.spi.ServiceLoader;
 
 import javax.swing.*;
 
@@ -11,7 +11,7 @@ public class ICodeLessConfigurable implements SearchableConfigurable {
 
     private ICodeLessConfigurableGUI iCodeLessConfigurableGUI;
 
-    private EditableTemplateManager templateManager = ServiceManager.getService(EditableTemplateManager.class);
+    private EditableTemplateManager templateManager = ServiceLoader.getService(EditableTemplateManager.class);
 
     public boolean isModified() {
         return templateManager.isAnyModified();

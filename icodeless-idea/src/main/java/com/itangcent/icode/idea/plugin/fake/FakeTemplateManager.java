@@ -1,4 +1,4 @@
-package com.itangcent.idea.plugin.fake;
+package com.itangcent.icode.idea.plugin.fake;
 
 import com.itangcent.icode.api.EditableTemplate;
 import com.itangcent.icode.api.EditableTemplateManager;
