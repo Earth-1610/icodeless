@@ -1,4 +1,4 @@
-package com.itangcent.idea.plugin.ui;
+package com.itangcent.icode.idea.plugin.ui;
 
 import javax.swing.*;
 
