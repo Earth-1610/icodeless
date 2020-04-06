@@ -34,7 +34,7 @@
 
         <applicationService
                 serviceInterface="com.itangcent.icode.api.EditableTemplateManager"
-                serviceImplementation="com.itangcent.icode.idea.plugin.fake.FakeTemplateManager">
+                serviceImplementation="com.itangcent.icode.sqlite.SqliteTemplateManager">
 
         </applicationService>
     </extensions>
