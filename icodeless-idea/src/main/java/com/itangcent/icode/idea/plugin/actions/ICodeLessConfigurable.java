@@ -4,6 +4,7 @@ import com.intellij.openapi.options.SearchableConfigurable;
 import com.itangcent.icode.api.EditableTemplateManager;
 import com.itangcent.icode.idea.plugin.ui.ICodeLessConfigurableGUI;
 import com.itangcent.icode.spi.ServiceLoader;
+import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
@@ -17,6 +18,7 @@ public class ICodeLessConfigurable implements SearchableConfigurable {
         return templateManager.isAnyModified();
     }
 
+    @NotNull
     public String getId() {
         return "preference.ICodeLessConfigurable";
     }
@@ -31,7 +33,6 @@ public class ICodeLessConfigurable implements SearchableConfigurable {
 
     public JComponent createComponent() {
         iCodeLessConfigurableGUI = new ICodeLessConfigurableGUI();
-
         iCodeLessConfigurableGUI.onCreate();
         return iCodeLessConfigurableGUI.getRootPanel();
     }

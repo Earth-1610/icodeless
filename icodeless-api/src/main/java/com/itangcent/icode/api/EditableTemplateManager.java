@@ -1,6 +1,8 @@
 package com.itangcent.icode.api;
 
 
+import java.util.List;
+
 public interface EditableTemplateManager extends TemplateManager {
 
     /**
@@ -27,6 +29,16 @@ public interface EditableTemplateManager extends TemplateManager {
      * Return true if any template was modified.
      */
     boolean isAnyModified();
+
+    /**
+     * Gets all templates which has be edited and modified.
+     */
+    List<EditableTemplate> allModified();
+
+    /**
+     * discard all changes
+     */
+    void reset();
 
     /**
      * Save all changes.

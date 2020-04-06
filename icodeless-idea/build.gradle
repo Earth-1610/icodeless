@@ -55,7 +55,12 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     compile project(":icodeless-api")
-    compile project(":icodeless-core")
+
+    compile(project(":icodeless-core")) {
+        exclude group: 'org.xerial'
+        exclude group: 'org.apache.commons'
+        exclude group: 'com.google.code.gson'
+    }
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

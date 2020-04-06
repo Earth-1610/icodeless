@@ -15,4 +15,6 @@ public interface EditableTemplate extends Template {
     void setType(String type);
 
     void setContent(String content);
+
+    boolean isAnyModified();
 }
