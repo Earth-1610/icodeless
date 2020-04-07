@@ -5,33 +5,30 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A generic UIContainer is a component that can contain other AWT components.
+ *
+ * @see java.awt.Container
+ */
 public interface UIContainer {
 
     /**
      * Appends the specified component to the end of this container.
-     * <p>
-     * This method changes layout-related information, and therefore,
-     * invalidates the component hierarchy. If the container has already been
-     * displayed, the hierarchy must be validated thereafter in order to
-     * display the added component.
      *
      * @param comp the component to be added
      * @return the component argument
-     * @throws NullPointerException if {@code comp} is {@code null}
-     * @see javax.swing.JComponent#revalidate()
      */
     Component add(Component comp);
 
     /**
-     * Removes the <code>Viewport</code>s one lightweight child.
+     * Removes the specified component from this container.
      */
     void remove(Component child);
 
     /**
-     * remove all sub components
+     * Remove all sub components which has be added by {@link #add}
      */
     void clear();
-
 
     static UIContainer of(Container container) {
         if (container instanceof JScrollPane) {
@@ -43,24 +40,48 @@ public interface UIContainer {
 
     abstract class AbstractUIContainer implements UIContainer {
 
+        /**
+         * cached components which has be added by {@link #add}.
+         */
         private List<Component> subs = new ArrayList<>();
 
+        /**
+         * Appends the specified component to the end of this container.
+         * And cached it to {@link #subs}.
+         *
+         * @param comp the component to be added
+         * @return
+         */
         @Override
         public Component add(Component comp) {
             subs.add(comp);
             return doAdd(comp);
         }
 
+        /**
+         * Removes the specified component from this container.
+         * And remove it from {@link #subs}
+         */
         @Override
         public void remove(Component child) {
             subs.remove(child);
             doRemove(child);
         }
 
+        /**
+         * Appends the specified component to the end of this container.
+         */
         abstract Component doAdd(Component comp);
 
+        /**
+         * Removes the specified component from this container.
+         */
         abstract void doRemove(Component child);
 
+        /**
+         * Remove all sub components which has be added by {@link #add}
+         * And clear cached {@link #subs}
+         */
         @Override
         public void clear() {
             if (!subs.isEmpty()) {
@@ -106,6 +127,9 @@ public interface UIContainer {
             return container.getViewport().add(comp);
         }
 
+        /**
+         * Removes the <code>Viewport</code>s one lightweight child.
+         */
         @Override
         public void doRemove(Component child) {
             container.getViewport().remove(child);
