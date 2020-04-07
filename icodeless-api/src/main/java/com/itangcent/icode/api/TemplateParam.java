@@ -14,7 +14,7 @@ public interface TemplateParam extends NamedElement {
      */
     default boolean optional() {
         String defaultValue = defaultValue();
-        return defaultValue() != null && !defaultValue.isEmpty();
+        return defaultValue != null && !defaultValue.isEmpty();
     }
 
     /**
