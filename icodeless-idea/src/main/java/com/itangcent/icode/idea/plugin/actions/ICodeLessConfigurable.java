@@ -33,11 +33,11 @@ public class ICodeLessConfigurable implements SearchableConfigurable {
 
     public JComponent createComponent() {
         iCodeLessConfigurableGUI = new ICodeLessConfigurableGUI();
-        iCodeLessConfigurableGUI.onCreate();
+        iCodeLessConfigurableGUI.onCreate(templateManager);
         return iCodeLessConfigurableGUI.getRootPanel();
     }
 
     public void reset() {
-        iCodeLessConfigurableGUI.reset();
+        iCodeLessConfigurableGUI.reset(templateManager);
     }
 }
